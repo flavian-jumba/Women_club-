@@ -1,0 +1,477 @@
+        :root {
+            --navy: #1B365D;
+            --gold: #C4B454;
+            --rose: #E8B4B8;
+            --cream: #F5F5F0;
+            --sage: #B4C6A6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--navy);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--cream);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links .apply-button {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-left: 20px;
+        }
+
+        .nav-links .apply-button:hover {
+            background: var(--cream);
+            color: var(--navy);
+            transform: translateY(-2px);
+        }
+
+
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(27, 54, 93, 0.4), rgba(27, 54, 93, 0.4)),
+                        url('img/portrait-diverse-women-together.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--cream);
+            margin-bottom: 0;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 1px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--rose), var(--sage));
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 600px;
+            background: url('img/Luminous\ Women\ .png') center/cover;
+            border-radius: 5px;
+            box-shadow: 20px 20px 0 var(--rose);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 5px;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 20px rgba(27, 54, 93, 0.1);
+        }
+
+        .benefit-card h3 {
+            color: var(--navy);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Application Form */
+        .application {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+
+        .application::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sage), var(--gold), var(--rose));
+        }
+
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--navy);
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--navy);
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        button {
+            background: var(--navy);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0 0;
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: inherit;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
+            color: var(--gold);
+            margin-bottom: 60px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            padding: 40px 0;
+            border-top: 1px solid rgba(196, 180, 84, 0.2);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .social-icons a {
+            color: var(--cream);
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-text {
+            text-align: center;
+            color: var(--cream);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-grid, .benefits-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            .about-image {
+                height: 400px;
+                box-shadow: 10px 10px 0 var(--rose);
+            }
+
+            .section-title {
+                font-size: 2.5em;
+            }
+        }
+
+            /* Membership Tiers Section */
+    .tiers {
+        padding: 100px 0;
+        background: white;
+        position: relative;
+    }
+
+    .tiers::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--rose), var(--gold), var(--sage));
+    }
+
+    .tier-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .tier-card {
+        background: var(--cream);
+        padding: 40px;
+        border-radius: 8px;
+        text-align: center;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .tier-card.featured::before {
+        content: 'Most Popular';
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: var(--gold);
+        color: white;
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .tier-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(27, 54, 93, 0.1);
+    }
+
+    .tier-name {
+        color: var(--navy);
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .tier-price {
+        color: var(--gold);
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        font-family: 'Cormorant Garamond', serif;
+    }
+
+    .tier-features {
+        list-style: none;
+        margin-bottom: 30px;
+    }
+
+    .tier-features li {
+        margin-bottom: 10px;
+        color: var(--navy);
+    }
+
+    /* Events Section */
+    .events {
+        padding: 100px 0;
+        background: var(--cream);
+    }
+
+    .event-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .event-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    .event-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(27, 54, 93, 0.1);
+    }
+
+    .event-image {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .event-content {
+        padding: 25px;
+    }
+
+    .event-date {
+        color: var(--gold);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .event-title {
+        color: var(--navy);
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .event-description {
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        line-height: 1.6;
+    }
+
+    .spots-left {
+        color: var(--rose);
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+        .tier-cards, .event-cards {
+            grid-template-columns: 1fr;
+        }
+    }
